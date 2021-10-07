@@ -1,7 +1,9 @@
 package com.bridgelabz.helloworld;
 
 import org.springframework.web.bind.annotation.*;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 public class HelloWorldController {
 
@@ -34,4 +36,11 @@ public class HelloWorldController {
     public Student test4(@RequestBody Student student){
         return student;
     }
+
+    @RequestMapping(value = "/test5", method = RequestMethod.PUT)
+    public Student test5(@RequestBody Student student){
+        log.info(student.toString());
+        return student;
+    }
+
 }
