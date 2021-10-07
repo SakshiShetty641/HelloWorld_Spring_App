@@ -30,4 +30,8 @@ public class HelloWorldController {
         return "Hello : " + name  + fname + " " + lname;
     }
 
+    @RequestMapping(value = "/test4", method = RequestMethod.PUT)
+    public Student test4(@RequestBody Student student){
+        return student;
+    }
 }
